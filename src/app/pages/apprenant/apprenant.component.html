@@ -1,0 +1,21 @@
+<div class="col">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Liste des apprenants</h1>
+        </div>
+        <div class="col-md-5 ">
+           <app-action-bouton (clickEvent)="nouvelApprenant()"></app-action-bouton>
+        </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="errorMsg">
+        {{errorMsg}}
+    </div>
+    <div class="col m-3">
+        <app-detail-apprenant *ngFor="let app of apprenants"
+         [apprenantDto]="app" (suppressionResult)="handelSuppression($event)">
+        </app-detail-apprenant>
+    </div>
+    <div class="row text-center mb-2" *ngIf="apprenants.length > 0">
+       <app-pagination-repetition></app-pagination-repetition>
+    </div>
+</div>

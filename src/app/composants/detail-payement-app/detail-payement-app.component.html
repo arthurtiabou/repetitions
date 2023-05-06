@@ -1,0 +1,104 @@
+<div class="container">
+    <h1 class="text-center mb-5">Reçu de paiement</h1>
+    
+    <!-- Ajouter les informations sur l'élève -->
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Nom de l'élève:</strong> {{paiementAppDto.apprenantDto.nom}}</p>
+        <p><strong>Classe:</strong> {{paiementAppDto.apprenantDto.niveau}}</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <p><strong>Date:</strong> 25 mars 2023</p>
+        <p><strong>Référence:</strong> 123456789</p>
+      </div>
+    </div>
+    
+    <!-- Ajouter les détails du paiement -->
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th class="text-right">Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Montant Verse</td>
+          <td class="text-right">{{paiementAppDto.montant}} XFA</td>
+        </tr>
+        <tr>
+          <td>Montant Avance</td>
+          <td class="text-right">O XFA</td>
+        </tr>
+        <tr>
+          <td>Montant Restant</td>
+          <td class="text-right">{{paiementAppDto.apprenantDto.fraisCour}}-{{paiementAppDto.montant}} XFA</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- Ajouter le total et les informations de paiement -->
+    <div class="row mt-5">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Total:</td>
+              <td class="text-right">{{paiementAppDto.montant}} XFA</td>
+            </tr>
+            <tr>
+              <td>Mode de paiement:</td>
+              <td class="text-right">MTN momo</td>
+            </tr>
+            <tr>
+              <td>Référence de paiement:</td>
+              <td class="text-right">1234 5678 9012 3456</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-link text-decoration-none">
+          <i class="fa-solid fa-print" style="color: #6776de;"></i>
+             Imprimer</button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-link text-decoration-none" (click)="modifierPaiement()" >
+       <i class="fa-solid fa-pen" style="color: #6776de;"></i>
+           Modifier</button>
+  </div>
+    <div class="col-md-2">
+      <button class="btn btn-link text-decoration-none" style="color: red;"
+         data-bs-toggle="modal" data-bs-target="#modalDeleteApp">
+         <i class="fa-solid fa-trash-can" style="color: red;"></i>
+             Suprimer</button>
+    </div>
+   
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDeleteApp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation Suppression</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h6>Voulez vous vraiment supprimez ce recue ?</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" 
+        data-bs-dismiss="modal">
+        <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp;Annuler</button>
+        <button type="button" class="btn btn-danger" (click)="confirmerSuppression()">
+          <i class="fa-solid fa-trash-can" style="color: white;"></i>&nbsp;Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+

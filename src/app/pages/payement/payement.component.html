@@ -1,0 +1,43 @@
+<div class="col">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Liste des paiements apprenants</h1>
+        </div>
+        <div class="col-md-5 ">
+            <app-action-bouton (clickEvent)="nouveauPaiement()"></app-action-bouton>
+        </div>
+    </div>
+    <div class="col m-3" *ngFor="let app of paiements" 
+    (suppressionResult)="handelSuppression($event)">
+        <div class="accordion mb-2" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                [attr.data-bs-target]="'#collapse' + app.id + app.id" aria-expanded="true" 
+                aria-controls="collapseOne">
+                <div style="width: 100%;">
+                  <app-detail-app [paiementAppDto]="app">
+
+                  </app-detail-app>
+                </div>
+                </button>
+              </h2>
+              <div id="collapse{{app.id}}{{app.id}}" class="accordion-collapse collapse" 
+              aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+               style="max-height:280px; overflow-y:scroll;">
+                <div class="accordion-body">
+                    <app-detail-payement-app [paiementAppDto]="app">
+                      
+                    </app-detail-payement-app>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </div>
+    <div class="row text-center mb-2" *ngIf="paiements.length > 0 ">
+      <app-pagination-repetition></app-pagination-repetition>
+    </div>
+</div>
+
+

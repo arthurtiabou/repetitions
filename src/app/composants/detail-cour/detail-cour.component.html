@@ -1,0 +1,86 @@
+<div class="row mb-1 custum-button">
+    <div class="col-md-1 border-right">
+            <img src="assets/student_male_100px.png" height="60px" width="60px" alt="">
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-3 border-right">
+        <div class="col">
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-circle-info" style="color: #6776de;"></i>
+                    &nbsp;{{courDto.enseignantDto.nom}}</div>
+            </div>
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-book" style="color: #6776de;"></i>
+                    &nbsp;{{courDto.matiere}}</div>
+            </div>
+        </div>
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-3 border-right">
+        <div class="col">
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-turn-up" style="color: #6776de;"></i>
+                    &nbsp; {{courDto.niveau}}</div>
+            </div>
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-stopwatch" style="color: #6776de;"></i>
+                    &nbsp; {{courDto.periode}}</div>
+            </div>
+        </div>
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-5 border-right">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-link text-decoration-none" (click)="modifierCour()">
+                    <div class="row">
+                        <div><i class="fa-solid fa-pen" style="color: #6776de;"></i></div>
+                        <div>Modifier</div>
+                    </div>
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-link text-decoration-none" style="color: red;"
+                data-bs-toggle="modal" data-bs-target="#modalDeleteApp">
+                <div class="row">
+                    <div>
+                         <i class="fa-solid fa-trash-can" style="color: red;"></i>
+                    </div>
+                    <div>Supprimer</div>
+                </div>
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-link text-decoration-none">
+                    <div class="row">
+                        <div><i class="fa-solid fa-ellipsis-vertical" style="color:#6776de"></i></div>
+                        <div>Details</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDeleteApp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation Suppression</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h6>Voulez vous vraiment supprimez ce cour ?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" 
+          data-bs-dismiss="modal">
+            <img src="assets/about_24px.png"alt="" height="24px" width="24px">&nbsp;Annuler</button>
+          <button type="button" class="btn btn-danger" (click)="confirmerSuppression()">
+            <img src="assets/trash_24px.png"alt=""height="24px"width="24px">&nbsp;Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

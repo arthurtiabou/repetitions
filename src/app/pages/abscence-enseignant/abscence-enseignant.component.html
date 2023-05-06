@@ -1,0 +1,58 @@
+<div class="col">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Liste des abscences enseignants</h1>
+        </div>
+        <div class="col-md-5 ">
+            <app-action-bouton (clickEvent)="nouvelleAbscenceEng()"></app-action-bouton>
+        </div>
+    </div>
+    <div class="col m-3">
+        <div class="accordion mb-2" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#collapseOne" aria-expanded="true" 
+                aria-controls="collapseOne">
+                <div style="width: 100%;">
+                  <app-detail-payement-abscence></app-detail-payement-abscence>
+                </div>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" 
+              aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+               style="max-height:280px; overflow-y:scroll;">
+                <div class="accordion-body">
+                    <app-information-abscence></app-information-abscence>
+                    <app-information-abscence></app-information-abscence>
+                    <app-information-abscence></app-information-abscence>
+                    <app-information-abscence></app-information-abscence>
+                    <app-information-abscence></app-information-abscence>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-2 text-left">
+                    <button class="btn btn-link text-decoration-none">
+                      <i class="fa-solid fa-print" style="color: #6776de;"></i> Imprimer</button>
+                  </div>
+                  <div class="col-md-2 text-left">
+                    <button class="btn btn-link text-decoration-none">
+                      <i class="fa-solid fa-pen" style="color: #6776de;"></i> Modifier</button>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <h5>Total heures: 17H</h5> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div> 
+    </div>
+    <div class="row text-center mb-2">
+        <app-pagination-repetition></app-pagination-repetition>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,37 @@
+.welcome-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+  }
+  
+  .welcome-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .tutorial-block {
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    min-height: 160px;
+    border-radius: 6px;
+  }
+  
+  .tutorial-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tutorial-block img {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .tutorial-block h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  
+  

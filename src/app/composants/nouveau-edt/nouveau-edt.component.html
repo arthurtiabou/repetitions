@@ -1,0 +1,250 @@
+<div class="col">
+    <div class="col-md-12">
+        <div class="col-md-12 m-2">
+            <h2><img src="assets/info_24px.png" alt="">&nbsp;
+                Information de l'emploi de temp </h2>
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+            <span *ngFor="let msg of errorMsg">{{msg}}<br></span>
+        </div>
+        <form >
+            <div class="row m-2 mb-4 mt-4">
+                <div class="col">
+                    <select  class="form-control" name="filiere" [(ngModel)]="edt.filiere">
+                        <option>Selectionnez une serie</option>
+                        <option>A</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>Esp/All</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control" name="niveau" 
+                    [(ngModel)]="edt.niveau">
+                        <option>Selectionnez un niveau</option>
+                        <option>Terminale</option>
+                        <option>Troisieme</option>
+                        <option>Premiere</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="date"
+                     placeholder="Date" [(ngModel)]="edt.date">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" name="id"
+                     placeholder="id emploi de temp" [(ngModel)]="edt.id">
+                </div>
+            </div>
+        </form>
+
+        <div class="col-md-12">
+
+            <div class="row m-2">
+                <div class="col">
+                    <h3>Periodes</h3>
+                </div>
+                <div class="col">
+                    <h3>Lundi</h3>
+                </div>
+                <div class="col">
+                    <h3>Mardi</h3>
+                </div>
+                <div class="col">
+                    <h3>Mercredi</h3>
+                </div>
+                <div class="col">
+                    <h3>Jeudi</h3>
+                </div>
+                <div class="col">
+                    <h3>Vendredi</h3>
+                </div>
+                <div class="col">
+                    <h3>Samedi</h3>
+                </div>
+            </div>
+
+            <form >
+                <div class="row m-2">
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>12H-14H</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour6"
+                        [(ngModel)]="cour6.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <select class="form-control">
+                            <option>14H-16H</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>NULL</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour7"
+                        [(ngModel)]="cour7.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <select  class="form-control">
+                            <option>16H-18H</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour1"
+                        [(ngModel)]="cour.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour2"
+                        [(ngModel)]="cour2.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour3"
+                        [(ngModel)]="cour3.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour4"
+                        [(ngModel)]="cour4.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour5"
+                        [(ngModel)]="cour5.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select  class="form-control" name="cour8"
+                        [(ngModel)]="cour8.id">
+                            <option>Selectionnez</option>
+                            <option *ngFor="let eng of cours" [value]="eng.id">
+                                {{eng.periode}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle1"
+                         placeholder="Salle1" [(ngModel)]="edt.salle">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle2"
+                         placeholder="Salle2" [(ngModel)]="edt.salle2">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle3"
+                         placeholder="Salle3" [(ngModel)]="edt.salle3">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle4"
+                         placeholder="Salle4" [(ngModel)]="edt.salle4">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle5"
+                         placeholder="Salle5" [(ngModel)]="edt.salle5">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="salle6"
+                         placeholder="Salle6" [(ngModel)]="edt.salle6">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-md-12 d-flex justify-content-end p-3 ">
+        <button class="btn btn-danger ml-2" (click)="cancelClick()">
+            <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp; Annuler
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="saveClick()">
+            <i class="fa-solid fa-save" style="color: white;"></i>&nbsp; Enregistrer
+        </button>
+    </div>
+</div>
+
+

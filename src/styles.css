@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import'~bootstrap/css/bootstrap.css';
+body{
+    background-color: #eff2f5 !important;
+}
+.backgroung-grey{
+    background-color: #eff2f5 !important;
+}
+.border-none{
+    border: none !important;
+}
+.min-height-80{
+    min-height: 80px;
+}
+.border-right{
+    border-right: solid gainsboro;
+    border-bottom: solid gainsboro;
+}
+.custum-button{
+    border-right: solid gainsboro;
+    border-radius: 6px;
+}
+
+
+/* You can add global styles to this file, and also import other style files */

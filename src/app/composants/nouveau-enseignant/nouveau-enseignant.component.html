@@ -1,0 +1,73 @@
+<div class="col">
+    <div class="col-md-12 mb-2">
+        <img src="assets/teacher_100px.png" alt="" class="rounded-circle" height="200px" width="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12 m-2">
+            <h2><img src="assets/info_24px.png" alt="">&nbsp;
+                Information de l'enseignant </h2>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+                <span *ngFor="let msg of errorMsg">{{msg}}<br></span>
+            </div>
+            <form >
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="nom"
+                         placeholder="Nom" [(ngModel)]="enseignant.nom">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control"
+                        name="id" placeholder="id de l'enseignant" [(ngModel)]="enseignant.id">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="prenom"
+                         placeholder="Prenom" [(ngModel)]="enseignant.prenom">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="niveau"
+                         placeholder="Niveau" [(ngModel)]="enseignant.niveau">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="number" class="form-control" name="fraisCour"
+                         placeholder="Taux horaire" [(ngModel)]="enseignant.fraisCour">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="email"
+                         placeholder="Email" [(ngModel)]="enseignant.email">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="telephone"
+                         placeholder="Telephone" [(ngModel)]="enseignant.telephone">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="matiere"
+                         placeholder="Matiere" [(ngModel)]="enseignant.matiere">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-md-12 d-flex justify-content-end p-3 ">
+        <button class="btn btn-danger ml-2" (click)="cancelClick()">
+            <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp; Annuler
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="saveClick()">
+            <i class="fa-solid fa-save" style="color: white;"></i>&nbsp; Enregistrer
+        </button>
+    </div>
+</div>
+
+

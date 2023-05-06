@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="card col-md-5 m-3 text-center">
+        <div class="col m-3">
+            <div>
+                <img src="assets/average_2_48px.png" alt="" width="180px" height="180px">
+            </div>
+            <div>
+                <h2>Nom Prenom</h2>
+                <small class="form-text text-muted">Adresse Telephone</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-md-6 m-3">
+        <form>
+            <div class="form-group m-3">
+                <input type="password" class="form-control" placeholder="Ancien mot de passe">
+            </div>
+            <div class="form-group m-3">
+                <input type="password" class="form-control" placeholder="Nouveau mot de passe">
+            </div>
+            <div class="form-group m-3">
+                <input type="password" class="form-control" placeholder="Confirmer mot de passe">
+            </div>
+        </form>
+        <div class="row text-right">
+            <div class="col-md-12 d-flex justify-content-end p-3 ">
+                <button class="btn btn-danger ml-2" (click)="cancelClick()">
+                    <img src="assets/unavailable_24px.png" alt="">&nbsp; Annuler
+                </button>
+                <button class="btn btn-primary"(click)="saveClick()">
+                    <img src="assets/save_close_24px.png" alt="">&nbsp; Enregistrer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,82 @@
+<div class="col">
+    <div class="col-md-12 mb-2">
+        <img src="assets/user_manual_64px.png" alt="" class="rounded-circle" height="200px" width="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12 m-2">
+            <h2><img src="assets/info_24px.png" alt="">&nbsp;
+                Information du cour </h2>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+                <span *ngFor="let msg of errorMsg">{{msg}}<br></span>
+            </div>
+            <form >
+                <div class="row m-2">
+                    <div class="col">
+                        <select class="form-control" 
+                        name="periode" [(ngModel)]="cour.periode" 
+                        id="exampleFormControlSelect1">
+                        <option>Selectionnez</option>
+                            <option>12H-14H</option>
+                            <option>14H-16H</option>
+                            <option>16H-18H</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control"
+                        name="id"
+                        placeholder="id du cour" [(ngModel)]="cour.id">
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col">
+                        <select class="form-control" name="eng" 
+                        [(ngModel)]="enseignant.id">
+                        <option>Selectionnez</option>
+                            <option *ngFor="let eng of enseignants" [value]="eng.id">
+                                {{eng.nom}} - {{eng.matiere}}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" name="filiere" 
+                        [(ngModel)]="cour.filiere">
+                        <option>Selectionnez</option>
+                            <option>A</option>
+                            <option>D</option>
+                            <option>C</option>
+                            <option>Esp/All</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <select class="form-control" name="niveau" 
+                        [(ngModel)]="cour.niveau">
+                        <option>Selectionnez</option>
+                            <option>Troisieme</option>
+                            <option>Premiere</option>
+                            <option>Terminale</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control"
+                        name="matiere"
+                        placeholder="Matiere" [(ngModel)]="cour.matiere">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-md-12 d-flex justify-content-end p-3 ">
+        <button class="btn btn-danger ml-2" (click)="cancelClick()">
+            <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp; Annuler
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="saveClick()">
+            <i class="fa-solid fa-save" style="color: white;"></i>&nbsp; Enregistrer
+        </button>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="row mb-1 custum-button">
+    <div class="col-md-1 border-right">
+            <img src="assets/average_2_48px.png" height="60px" width="60px" alt="">
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-3 border-right">
+        <div class="col">
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-circle-info" style="color: #6776de;"></i>
+                    &nbsp;{{utilisateurDto.nom}}</div>
+            </div>
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-circle-info" style="color: #6776de;"></i>
+                    &nbsp;{{utilisateurDto.prenom}}</div>
+            </div>
+        
+        </div>
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-3 border-right">
+        <div class="col">
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-phone"  style="color: #6776de;"></i>
+                    &nbsp;{{utilisateurDto.telephone}}</div>
+            </div>
+            <div class="row">
+                <div class="mr-3"><i class="fa-solid fa-at" style="color: #6776de;"></i>
+                    &nbsp;{{utilisateurDto.email}}</div>
+            </div>
+        </div>
+    </div>
+    <!-- details categorie-->
+    <div class="col-md-5 border-right">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-link text-decoration-none" (click)="modifierUtilisateur()">
+                    <div class="row">
+                        <div><i class="fa-solid fa-pen" style="color: #6776de;"></i></div>
+                        <div>Modifier</div>
+                    </div>
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-link text-decoration-none" style="color: red;"
+                data-bs-toggle="modal" data-bs-target="#modalDeleteApp">
+                <div class="row">
+                    <div>
+                         <i class="fa-solid fa-trash-can" style="color: red;"></i>
+                    </div>
+                    <div>Supprimer</div>
+                </div>
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-link text-decoration-none">
+                    <div class="row">
+                        <div><i class="fa-solid fa-ellipsis-vertical" style="color:#6776de"></i></div>
+                        <div>Details</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="modalDeleteApp"
+ data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation Suppression</h1>
+          <button type="button" class="btn-close"
+           data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h6>Voulez vous vraiment supprimez cette utilisateur ?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" 
+          data-bs-dismiss="modal">
+          <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp;Annuler</button>
+          <button type="button" class="btn btn-danger text-decoration-red"
+           (click)="confirmerSuppression()">
+            <i class="fa-solid fa-trash-can" style="color: white;"></i>&nbsp;Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

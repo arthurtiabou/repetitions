@@ -1,0 +1,1609 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Spring Doc",
+    "description": "Spring doc",
+    "version": "1.0.0"
+  },
+  "servers": [{
+    "url": "http://localhost:8081",
+    "description": "Generated server url"
+  }
+  ],
+  "paths": {
+    "/gestionrepetition/V2/utilisateur/create": {
+      "post": {
+        "tags": ["utilisateur-controller"],
+        "operationId": "save",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UtilisateurDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilisateurDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementeng/create": {
+      "post": {
+        "tags": ["paiement-eng-controller"],
+        "operationId": "save_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaiementEngDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaiementEngDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementapp/create": {
+      "post": {
+        "tags": ["paiement-app-controller"],
+        "operationId": "save_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaiementAppDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaiementAppDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/entreprise/create": {
+      "post": {
+        "tags": ["entreprise-controller"],
+        "operationId": "save_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntrepriseDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntrepriseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/enseignant/create": {
+      "post": {
+        "tags": ["enseignant-controller"],
+        "operationId": "save_4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnseignantDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnseignantDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/emploitemp/create": {
+      "post": {
+        "tags": ["emploi-temp-controller"],
+        "operationId": "save_5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmploiTempDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmploiTempDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/cour/create": {
+      "post": {
+        "tags": ["cour-controller"],
+        "operationId": "save_6",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/apprenant/create": {
+      "post": {
+        "tags": ["apprenant-controller"],
+        "operationId": "save_7",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApprenantDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApprenantDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceEng/create": {
+      "post": {
+        "tags": ["ligne-abscence-eng-controller"],
+        "operationId": "save_8",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LigneAbscenceEngDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LigneAbscenceEngDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceApp/create": {
+      "post": {
+        "tags": ["ligne-abscence-app-controller"],
+        "operationId": "save_9",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LigneAbscenceAppDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LigneAbscenceAppDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/utilisateur/{nom}": {
+      "get": {
+        "tags": ["utilisateur-controller"],
+        "operationId": "findByNom",
+        "parameters": [{
+          "name": "nom",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UtilisateurDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/utilisateur/get/{idUtilisateur}": {
+      "get": {
+        "tags": ["utilisateur-controller"],
+        "operationId": "findById",
+        "parameters": [{
+          "name": "idUtilisateur}",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilisateurDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/utilisateur/all": {
+      "get": {
+        "tags": ["utilisateur-controller"],
+        "operationId": "findAll",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UtilisateurDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementeng/{idEnseignant}": {
+      "get": {
+        "tags": ["paiement-eng-controller"],
+        "operationId": "findByEnseignantIdContains",
+        "parameters": [{
+          "name": "idEnseignant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PaiementEngDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementeng/get/{idPaiementEng}": {
+      "get": {
+        "tags": ["paiement-eng-controller"],
+        "operationId": "findById_1",
+        "parameters": [{
+          "name": "idPaiementEng",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaiementEngDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementapp/{idApprenant}": {
+      "get": {
+        "tags": ["paiement-app-controller"],
+        "operationId": "findByApprenantIdContains",
+        "parameters": [{
+          "name": "idApprenant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PaiementAppDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementapp/get/{idPaiementApp}": {
+      "get": {
+        "tags": ["paiement-app-controller"],
+        "operationId": "findById_2",
+        "parameters": [{
+          "name": "idPaiementApp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaiementAppDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementEng/all": {
+      "get": {
+        "tags": ["paiement-eng-controller"],
+        "operationId": "findAll_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PaiementEngDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementApp/all": {
+      "get": {
+        "tags": ["paiement-app-controller"],
+        "operationId": "findAll_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PaiementAppDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/entreprise/{idEntreprise}": {
+      "get": {
+        "tags": ["entreprise-controller"],
+        "operationId": "findById_3",
+        "parameters": [{
+          "name": "idEntreprise",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntrepriseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/entreprise/get/{nom}": {
+      "get": {
+        "tags": ["entreprise-controller"],
+        "operationId": "findByNom_1",
+        "parameters": [{
+          "name": "nom",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntrepriseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/entreprise/all": {
+      "get": {
+        "tags": ["entreprise-controller"],
+        "operationId": "findAll_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntrepriseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/enseignant/{nom}": {
+      "get": {
+        "tags": ["enseignant-controller"],
+        "operationId": "findByNom_2",
+        "parameters": [{
+          "name": "nom",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EnseignantDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/enseignant/get/{idEnseignant}": {
+      "get": {
+        "tags": ["enseignant-controller"],
+        "operationId": "findById_4",
+        "parameters": [{
+          "name": "idEnseignant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnseignantDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/enseignant/all": {
+      "get": {
+        "tags": ["enseignant-controller"],
+        "operationId": "findAll_4",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EnseignantDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/emploitemp/{niveau}{filiere}": {
+      "get": {
+        "tags": ["emploi-temp-controller"],
+        "operationId": "findByNiveauAndFiliere",
+        "parameters": [{
+          "name": "niveau",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "name": "filiere",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmploiTempDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/emploitemp/get/{idEmploitemp}": {
+      "get": {
+        "tags": ["emploi-temp-controller"],
+        "operationId": "findById_5",
+        "parameters": [{
+          "name": "idEmploitemp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmploiTempDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/emploitemp/all": {
+      "get": {
+        "tags": ["emploi-temp-controller"],
+        "operationId": "findAll_5",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmploiTempDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/courparmatiere/{matiere}": {
+      "get": {
+        "tags": ["cour-controller"],
+        "operationId": "findByMatiere",
+        "parameters": [{
+          "name": "matiere",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/courparid/{idCour}": {
+      "get": {
+        "tags": ["cour-controller"],
+        "operationId": "findById_6",
+        "parameters": [{
+          "name": "idCour",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/cour/{matiere}{niveau}{filiere}": {
+      "get": {
+        "tags": ["cour-controller"],
+        "operationId": "findByMatiereAndNiveauAndFiliere",
+        "parameters": [{
+          "name": "matiere",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "name": "niveau",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "name": "filiere",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/cour/get/{idEmploiTemp}": {
+      "get": {
+        "tags": ["cour-controller"],
+        "operationId": "findByEmploiTempIdContains",
+        "parameters": [{
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/cour/all": {
+      "get": {
+        "tags": ["cour-controller"],
+        "operationId": "findAll_6",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/apprenant/{idApprenant}": {
+      "get": {
+        "tags": ["apprenant-controller"],
+        "operationId": "findById_7",
+        "parameters": [{
+          "name": "idApprenant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApprenantDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/apprenant/nom/{nom}": {
+      "get": {
+        "tags": ["apprenant-controller"],
+        "operationId": "findByNom_3",
+        "parameters": [{
+          "name": "nom",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApprenantDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/apprenant/all": {
+      "get": {
+        "tags": ["apprenant-controller"],
+        "operationId": "findAll_7",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApprenantDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceEng/{idEnseignant}": {
+      "get": {
+        "tags": ["ligne-abscence-eng-controller"],
+        "operationId": "findByEnseignantIdContains_1",
+        "parameters": [{
+          "name": "idEnseignant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LigneAbscenceEngDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceEng/get/{idLigneAbscenceEng}": {
+      "get": {
+        "tags": ["ligne-abscence-eng-controller"],
+        "operationId": "findById_8",
+        "parameters": [{
+          "name": "idLigneAbscenceEng",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LigneAbscenceEngDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceEng/all": {
+      "get": {
+        "tags": ["ligne-abscence-eng-controller"],
+        "operationId": "findAll_8",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LigneAbscenceEngDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceApp/{idApprenant}": {
+      "get": {
+        "tags": ["ligne-abscence-app-controller"],
+        "operationId": "findByApprenantIdContains_1",
+        "parameters": [{
+          "name": "idApprenant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LigneAbscenceAppDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceApp/get/{idLigneAbscenceApp}": {
+      "get": {
+        "tags": ["ligne-abscence-app-controller"],
+        "operationId": "findById_9",
+        "parameters": [{
+          "name": "idLigneAbscenceApp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LigneAbscenceAppDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/abscenceApp/all": {
+      "get": {
+        "tags": ["ligne-abscence-app-controller"],
+        "operationId": "findAll_9",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LigneAbscenceAppDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/utilisateur/delete/{idUtilisateur}": {
+      "delete": {
+        "tags": ["utilisateur-controller"],
+        "operationId": "delete",
+        "parameters": [{
+          "name": "idUtilisateur",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementEng/delete/{idPaiementEng}": {
+      "delete": {
+        "tags": ["paiement-eng-controller"],
+        "operationId": "delete_1",
+        "parameters": [{
+          "name": "idPaiementEng",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/paiementApp/delete/{idPaiementApp}": {
+      "delete": {
+        "tags": ["paiement-app-controller"],
+        "operationId": "delete_2",
+        "parameters": [{
+          "name": "idPaiementApp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/entreprise/delete/{idEntreprise}": {
+      "delete": {
+        "tags": ["entreprise-controller"],
+        "operationId": "delete_3",
+        "parameters": [{
+          "name": "idEntreprise",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/enseignant/delete/{idEnseignant}": {
+      "delete": {
+        "tags": ["enseignant-controller"],
+        "operationId": "delete_4",
+        "parameters": [{
+          "name": "idEnseignant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/emploitemp/delete/{idEmploiTemp}": {
+      "delete": {
+        "tags": ["emploi-temp-controller"],
+        "operationId": "delete_5",
+        "parameters": [{
+          "name": "idEmploiTemp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/cour/delete/{idCour}": {
+      "delete": {
+        "tags": ["cour-controller"],
+        "operationId": "delete_6",
+        "parameters": [{
+          "name": "idCour",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/apprenant/delete/{idApprenant}": {
+      "delete": {
+        "tags": ["apprenant-controller"],
+        "operationId": "delete_7",
+        "parameters": [{
+          "name": "idApprenant",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/AbscenceApp/delete/{idLigneAbscenceEng}": {
+      "delete": {
+        "tags": ["ligne-abscence-eng-controller"],
+        "operationId": "delete_8",
+        "parameters": [{
+          "name": "idLigneAbscenceEng",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gestionrepetition/V2/AbscenceApp/delete/{idLigneAbscenceApp}": {
+      "delete": {
+        "tags": ["ligne-abscence-app-controller"],
+        "operationId": "delete_9",
+        "parameters": [{
+          "name": "idLigneAbscenceApp",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UtilisateurDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "prenom": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "telephnone": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "motDePasse": {
+            "type": "string"
+          }
+        }
+      },
+      "EnseignantDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "niveau": {
+            "type": "string"
+          },
+          "estSolde": {
+            "type": "boolean"
+          },
+          "tauxHoraire": {
+            "type": "number",
+            "format": "double"
+          },
+          "prenom": {
+            "type": "string"
+          }
+        }
+      },
+      "PaiementEngDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enseignant": {
+            "$ref": "#/components/schemas/EnseignantDto"
+          },
+          "montantVerse": {
+            "type": "number"
+          }
+        }
+      },
+      "ApprenantDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "prenom": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "filiere": {
+            "type": "string"
+          },
+          "niveau": {
+            "type": "string"
+          },
+          "fraisDeCour": {
+            "type": "number",
+            "format": "double"
+          },
+          "estEnRegle": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PaiementAppDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apprenant": {
+            "$ref": "#/components/schemas/ApprenantDto"
+          },
+          "montantVerse": {
+            "type": "number"
+          }
+        }
+      },
+      "EntrepriseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "adresse": {
+            "type": "string"
+          },
+          "codePostale": {
+            "type": "string"
+          }
+        }
+      },
+      "EmploiTempDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salle": {
+            "type": "string"
+          },
+          "filiere": {
+            "type": "string"
+          },
+          "niveau": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      },
+      "CourDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matiere": {
+            "type": "string"
+          },
+          "niveau": {
+            "type": "string"
+          },
+          "filiere": {
+            "type": "string"
+          },
+          "periode": {
+            "type": "string"
+          },
+          "enseignantDto": {
+            "$ref": "#/components/schemas/EnseignantDto"
+          },
+          "emploiTempDto": {
+            "$ref": "#/components/schemas/EmploiTempDto"
+          }
+        }
+      },
+      "LigneAbscenceEngDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enseignantDto": {
+            "$ref": "#/components/schemas/EnseignantDto"
+          },
+          "courDto": {
+            "$ref": "#/components/schemas/CourDto"
+          }
+        }
+      },
+      "LigneAbscenceAppDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apprenantDto": {
+            "$ref": "#/components/schemas/ApprenantDto"
+          },
+          "courDto": {
+            "$ref": "#/components/schemas/CourDto"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container my-container"
+ style="margin-top:10% ;margin-bottom:10%; max-width:40%">
+    <div class="card justify-content-md-center">
+        <div class="card-header text-center">
+            <h3>S'inscrire</h3>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+                <span *ngFor="let msg of errorMsg">{{msg}}<br></span>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" name="id" 
+                placeholder="id" [(ngModel)]="utilisateur.id">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="nom" 
+                placeholder="Nom" [(ngModel)]="utilisateur.nom">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="prenom" 
+                placeholder="Prenom" [(ngModel)]="utilisateur.prenom">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="telephone" 
+                placeholder="Telephone" [(ngModel)]="utilisateur.telephone">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="email" 
+                placeholder="E-mail" [(ngModel)]="utilisateur.email">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="passe" 
+                placeholder="Mot de passe" [(ngModel)]="utilisateur.motPasse">
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+               <button type="button" class="btn btn-primary" (click)="saveClick()">S'inscrire</button>
+               <a [routerLink]="['/login']" class="btn btn-link">Se connecter</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

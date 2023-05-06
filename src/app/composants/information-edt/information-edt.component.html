@@ -1,0 +1,95 @@
+<div class="container">
+    <h1>Emploi du temps scolaire</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Heure</th>
+          <th>Lundi</th>
+          <th>Mardi</th>
+          <th>Mercredi</th>
+          <th>Jeudi</th>
+          <th>Vendredi</th>
+          <th>Samedi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12h00 - 14h00</td>
+          <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>{{edtDto.cour8.matiere}}</strong><br>
+              Eng : {{edtDto.cour8.enseignantDto.nom}}<br>Salle : {{edtDto.salle6}}</td>
+        </tr>
+        <tr>
+          <td>14h00 - 16h00</td>
+          <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>NULL</strong><br>Eng : NULL<br>Salle : NULL</td>
+            <td><strong>{{edtDto.cour7.matiere}}</strong><br>
+              Eng : {{edtDto.cour7.enseignantDto.nom}}<br>Salle : {{edtDto.salle6}}</td>
+        </tr>
+        <tr>
+            <td>16h00 - 18h00</td>
+            <td><strong>{{edtDto.cour1.matiere}}</strong><br>
+              Eng : {{edtDto.cour1.enseignantDto.nom}}<br>Salle :{{edtDto.salle}}</td>
+            <td><strong>{{edtDto.cour2.matiere}}</strong><br>
+              Eng : {{edtDto.cour2.enseignantDto.nom}}<br>Salle : {{edtDto.salle2}}</td>
+            <td><strong>{{edtDto.cour3.matiere}}</strong><br>
+              Eng : {{edtDto.cour3.enseignantDto.nom}}<br>Salle : {{edtDto.salle3}}</td>
+            <td><strong>{{edtDto.cour4.matiere}}</strong><br>
+              Eng : {{edtDto.cour4.enseignantDto.nom}}<br>Salle : {{edtDto.salle4}}</td>
+            <td><strong>{{edtDto.cour5.matiere}}</strong><br>
+              Eng : {{edtDto.cour5.enseignantDto.nom}}<br>Salle : {{edtDto.salle5}}</td>
+            <td><strong>{{edtDto.cour6.matiere}}</strong><br>
+              Eng : {{edtDto.cour6.enseignantDto.nom}}<br>Salle : {{edtDto.salle6}}</td>
+          </tr>
+        <!-- Ajoutez ici les autres heures de cours de la journée -->
+      </tbody>
+    </table>
+  </div>
+ <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-link text-decoration-none">
+              <i class="fa-solid fa-print" style="color: #6776de;"></i>
+                 Imprimer</button>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-link text-decoration-none" (click)="modifierEdt()">
+           <i class="fa-solid fa-pen" style="color: #6776de;"></i>
+               Modifier</button>
+      </div>
+        <div class="col-md-2">
+          <button class="btn btn-link text-decoration-none" style="color: red;"
+             data-bs-toggle="modal" data-bs-target="#modalDeleteApp">
+             <i class="fa-solid fa-trash-can" style="color: red;"></i>
+                 Suprimer</button>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDeleteApp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation Suppression</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h6>Voulez vous vraiment supprimez cette emploi de temp ?</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" 
+        data-bs-dismiss="modal">
+        <i class="fa-solid fa-trash-can" style="color: white;"></i>&nbsp;Annuler</button>
+        <button type="button" class="btn btn-danger" (click)="confirmerSuppression()">
+          <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp;Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 

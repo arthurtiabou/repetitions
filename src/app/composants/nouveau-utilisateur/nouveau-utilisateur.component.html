@@ -1,0 +1,71 @@
+<div class="col">
+    <div class="col-md-12 mb-2">
+        <img src="assets/average_2_48px.png" alt="" class="rounded-circle" height="200px" width="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12 m-2">
+            <h2><img src="assets/info_24px.png" alt="">&nbsp;
+                Information de l'utilisateur </h2>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+                <span *ngFor="let msg of errorMsg">{{msg}}<br></span>
+            </div>
+            <form >
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="nom" 
+                        placeholder="Nom" [(ngModel)]="utilisateur.nom">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" name="id" 
+                        placeholder="id de l'utilisateur" [(ngModel)]="utilisateur.id">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="prenom" 
+                        placeholder="Prenom" [(ngModel)]="utilisateur.prenom">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="role"  
+                        placeholder="Role" [(ngModel)]="utilisateur.role">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="email" 
+                        placeholder="E-mail" [(ngModel)]="utilisateur.email">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="telephone" 
+                        placeholder="Telephone" [(ngModel)]="utilisateur.telephone">
+                    </div>
+                </div>
+
+                <div class="row m-2">
+                    <div class="col">
+                        <input type="number" class="form-control" name="id2" 
+                        placeholder="id de l'entreprise" [(ngModel)]="entreprise.id">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="cle" 
+                        placeholder="mot de passe" [(ngModel)]="utilisateur.motPasse">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-md-12 d-flex justify-content-end p-3 ">
+        <button class="btn btn-danger ml-2" (click)="cancelClick()">
+            <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp; Annuler
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="saveClick()">
+            <i class="fa-solid fa-save" style="color: white;"></i>&nbsp; Enregistrer
+        </button>
+    </div>
+</div>
+

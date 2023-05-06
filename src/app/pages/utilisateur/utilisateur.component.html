@@ -1,0 +1,20 @@
+<div class="col">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Liste des utilisateurs</h1>
+        </div>
+        <div class="col-md-5 ">
+            <app-action-bouton (clickEvent)="nouvelUtilisateur()"></app-action-bouton>
+        </div>
+    </div>
+    <div class="col m-3" >
+        <app-detail-utilisateur *ngFor="let eng of utilisateurs" 
+        [utilisateurDto]="eng" (suppressionResult)="handelSuppression($event)">
+             </app-detail-utilisateur>
+    </div>
+    <div class="row text-center mb-2" *ngIf="utilisateurs.length > 0">
+        <app-pagination-repetition></app-pagination-repetition>
+    </div>
+</div>
+
+

@@ -1,0 +1,96 @@
+<div class="col mb-3">
+    <div class="col-md-12">
+        <div class="col-md-12 m-2">
+            <h2>Nouvelle Abscence</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-5 border-right">
+                <form>
+                    <div class="form-group m-3">
+                        <input type="date" class="form-control" placeholder="Date">
+                    </div>
+                    <div class="form-group m-3">
+                        <select  class="form-control">
+                            <option>app-1</option>
+                            <option>app-2</option>
+                            <option>app-3</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 border-right">
+                <div class="col">
+                    <div class="row">
+                        <div class="mr-3">
+                            <i class="fa-solid fa-circle-info" style="color: #6776de;"></i>&nbsp;Nom</div>
+                    </div>
+                    <div class="row">
+                        <div class="mr-3">
+                            <i class="fa-solid fa-circle-info" style="color: #6776de;"></i>&nbsp;Prenom</div>
+                    </div>
+                    <div class="row">
+                        <div class="mr-3">
+                            <i class="fa-solid fa-phone"  style="color: #6776de;"></i>&nbsp;6 783 345 08</div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-md-3 P-1 border-right">
+                <img src="assets/student_male_100px.png" alt="" class="rounded-circle" height="100px" width="100px">
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-2 p-2 border-right">
+            <form>
+                <div class="row ">
+                    <div class="col">
+                        <select id="exampleFormControlSelect1" class="form-control">
+                            <option>cour-1</option>
+                            <option>cour-2</option>
+                            <option>cour-3</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select id="exampleFormControlSelect1" class="form-control">
+                            <option>12H-14H</option>
+                            <option>14H-16H</option>
+                            <option>16H-18H</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control" placeholder="date">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-success">
+                            <i class="fa-solid fa-plus"  style="color:white;"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="row mt-2 p-2 border-right" style="max-height:280px;overflow-y: scroll">
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+            <app-information-abscence></app-information-abscence>
+        </div>
+
+        <div class="row text-right border-right">
+            <h3>Total heure d'abscence 17H</h3>
+        </div>
+    </div>
+
+
+    <div class="col-md-12 d-flex justify-content-end p-3 ">
+        <button class="btn btn-danger ml-2" (click)="cancelClick()">
+            <i class="fa-solid fa-stop" style="color: white;"></i>&nbsp; Annuler
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="saveClick()">
+            <i class="fa-solid fa-save" style="color: white;"></i>&nbsp; Enregistrer
+        </button>
+    </div>
+</div>
